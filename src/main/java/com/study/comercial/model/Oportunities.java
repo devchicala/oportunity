@@ -1,11 +1,17 @@
 package com.study.comercial.model;
 
+import jakarta.persistence.*;
+
 import java.math.BigDecimal;
 import java.util.Objects;
 
+@Entity
 public class Oportunities {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  Long id;
+    @Column(name="nome_empresa")
     private String nomeEmpresa;
     private String descricao;
     private BigDecimal valor;
